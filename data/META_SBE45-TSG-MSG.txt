@@ -1,0 +1,9 @@
+https://www.nodc.noaa.gov/archive/arc0185/0240415/1.1/data/0-data/RB-0_2021-07-27-133235/DeviceConfiguration_20210613-154208.xml
+SBE45-TSG-MSG: 
+internal water temperature (celcius), 
+conductivty (s/m), 
+salinity (psu), 
+sound velcocity (meters/second), 
+SBE38 external water temperature (celcius) 
+SBE38 External Water Temp: Located on scientific seawater system line in Bow Thruster room lower level. 
+

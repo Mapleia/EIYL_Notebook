@@ -1,0 +1,7 @@
+https://www.nodc.noaa.gov/archive/arc0185/0240415/1.1/data/0-data/RB-0_2021-07-27-133235/DeviceConfiguration_20210613-154208.xml
+SST-TSG-Temp-Diff: 
+header, 
+difference value (celcius), 
+SBE38 external temp (celcius), 
+	Located on scientific seawater system line in Bow Thruster room lower level. 
+SBE45 internal temp (celcius)

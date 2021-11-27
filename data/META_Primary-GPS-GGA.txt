@@ -1,0 +1,24 @@
+meta source:
+	https://www.nodc.noaa.gov/archive/arc0185/0240415/1.1/data/0-data/RB-0_2021-07-27-133235/DeviceConfiguration_20210613-154208.xml
+data source:
+	https://www.nodc.noaa.gov/archive/arc0185/0240415/1.1/data/0-data/RB-0_2021-07-27-133235/NAV/
+Primary-GPS-GGA: 
+header, 
+time (UTC), 
+	unit: hhmmss
+latitude, 
+	unit: DDMM.MM
+N or S, 
+longitude, 
+	unit: DDMM.MM
+E or W, 
+GPS quality indicator (0=fix not available, 1=GPS fix, 2=differential GPS fix), 
+number of satellites in view (00-12), 
+horizontal dilution of precision, 
+antenna altitude above/below mean-sea-level (geoid), 
+units of antenna altidue (meters), 
+geoidal separation, 
+units of geoidal separation (meters), 
+age of differential GPS data, 
+differential reference station ID (0000-1023), 
+checksum. 
