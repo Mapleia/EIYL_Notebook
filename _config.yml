@@ -1,4 +1,12 @@
 title: Ecology in My Life
 author: Kaede Ito
+execute:
+  allow_errors: false
 bibtex_bibfiles:
   - references.bib
+
+html:
+  use_repository_button: true
+repository:
+  url: https://github.com/Mapleia/EIYL_Notebook
+  branch: master

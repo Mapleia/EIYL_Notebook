@@ -11,15 +11,24 @@ Winter 2021
     a) Follow the R Notebook tutorial up until it tells you to create a notebook in the browser.
 
     b) With the browser UI, navigate to where this notebook is located.
-3. Install r packages through Anaconda. Open your commandline (Anaconda installation comes with one). Activate your notebook env.
+3. Install r packages through Anaconda.
 
-```
-conda install -c r r-tidyverse
-conda install -c r r-lubridate
-conda install -c r r-ggplot2
-conda install -c r r-plotly
-```
-4. Edit in the browser as you please!
+    a) Open your commandline (Anaconda installation comes with one).
+
+    b) Activate your notebook env.
+    ```
+    conda activate name_of_your_env_you_created
+    ```
+
+    c) Install the following R packages.
+
+    ```
+    conda install -c r r-tidyverse
+    conda install -c r r-lubridate
+    conda install -c r r-ggplot2
+    conda install -c r r-plotly
+    ```
+4. Edit the notebook in the browser as you please!
 
 ## Docker container
 Coming soon!
