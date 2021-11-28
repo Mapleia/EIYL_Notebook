@@ -8,7 +8,7 @@ Winter 2021
 1. [Install Anaconda](https://docs.anaconda.com/anaconda/install/index.html), a Python environment manager.
 2. [Setup](https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/) a [R](https://www.r-project.org/) environment with conda.
 
-    a) Follow the R Notebook tutorial up until it tells you to create a notebook in the browser.
+    a) Follow the R Notebook tutorial up until it tells you to create a notebook in the browser (use v3.7.11 Python and the latest R).
 
     b) With the browser UI, navigate to where this notebook is located.
 3. Install r packages through Anaconda.
@@ -32,3 +32,4 @@ Winter 2021
 
 ## Docker container
 Coming soon!
+https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html

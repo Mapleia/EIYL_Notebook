@@ -2,9 +2,23 @@ title: Ecology in My Life
 author: Kaede Ito
 execute:
   allow_errors: false
+  stderr_output: remove-warn
 bibtex_bibfiles:
   - references.bib
-
+parse:
+  myst_enable_extensions:
+      - html_admonition
+      - amsmath
+      - colon_fence
+      - deflist
+      - dollarmath
+      - html_admonition
+      - html_image
+      - linkify
+      - replacements
+      - smartquotes
+      - substitution
+      - tasklist
 html:
   use_repository_button: true
 repository:
