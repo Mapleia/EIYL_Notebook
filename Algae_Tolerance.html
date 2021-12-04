@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algae Temperature Tolerance &#8212; Ecology in My Life</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Ecology in My Life</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Project Info &amp; Setup
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ecology_In_Your_Life.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ocean_Temperature.html">
+   Ocean Temperature Data Exploring
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Discussion.html">
+   Discussion on Ocean Temperatures &amp; Algae
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Algae_Tolerance.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Mapleia/EIYL_Notebook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Mapleia/EIYL_Notebook/master?urlpath=tree/Algae_Tolerance.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-and-wrangling-data">
+   Reading and Wrangling Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-studies-of-algae-species-near-bc-and-the-pacific-coast">
+   Other Studies of Algae Species near BC and the Pacific Coast
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sargassum-horneri">
+     <em>
+      Sargassum horneri
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dinoflagellates-of-genus-alexandrium-in-the-salish-sea">
+     Dinoflagellates of genus
+     <em>
+      Alexandrium
+     </em>
+     in the Salish Sea
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phaeodactylum-tricornutum">
+     <em>
+      Phaeodactylum tricornutum
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calliarthron-tuberculosum-corallina-vancouveriensis">
+     <em>
+      Calliarthron tuberculosum &amp; Corallina vancouveriensis
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#temperature-tolerance-studies-on-predators">
+   Temperature Tolerance Studies on Predators
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="algae-temperature-tolerance">
+<h1>Algae Temperature Tolerance<a class="headerlink" href="#algae-temperature-tolerance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Analysis and visualization was done using R and various packages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">cowplot</span><span class="p">)</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">6</span><span class="p">,</span><span class="n">warn</span><span class="o">=</span><span class="m">-1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</div>
+<div class="section" id="reading-and-wrangling-data">
+<h2>Reading and Wrangling Data<a class="headerlink" href="#reading-and-wrangling-data" title="Permalink to this headline">¶</a></h2>
+<p>The entire dataset is found at <code class="docutils literal notranslate"><span class="pre">&quot;data/GlobalTherm_upload_02_11_17.csv&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">global_term_data</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/GlobalTherm_upload_02_11_17.csv&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">Genus</span><span class="p">,</span> <span class="n">Species</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">Tmax</span><span class="p">,</span> <span class="n">lat_max</span><span class="p">,</span> <span class="n">long_max</span><span class="p">,</span> <span class="n">tmin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">global_term_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Genus</th><th scope=col>Species</th><th scope=col>N</th><th scope=col>Tmax</th><th scope=col>lat_max</th><th scope=col>long_max</th><th scope=col>tmin</th></tr></thead>
+<tbody>
+	<tr><td>Prochilodus </td><td>scrofa      </td><td> 10         </td><td>35.7        </td><td>-22.0       </td><td> -43.50     </td><td> 8.23       </td></tr>
+	<tr><td>Lepomis     </td><td>gibbosus    </td><td> 24         </td><td>35.1        </td><td> 46.2       </td><td>-119.00     </td><td> 1.70       </td></tr>
+	<tr><td>Cyprinodon  </td><td>variegatus  </td><td>100         </td><td>44.2        </td><td> 26.0       </td><td> -97.15     </td><td> 6.90       </td></tr>
+	<tr><td>Oncorhynchus</td><td>keta        </td><td> NA         </td><td>23.2        </td><td> 52.0       </td><td>-128.90     </td><td>-0.70       </td></tr>
+	<tr><td>Oncorhynchus</td><td>nerka       </td><td> NA         </td><td>21.5        </td><td> 52.0       </td><td>-128.90     </td><td>-0.70       </td></tr>
+	<tr><td>Oncorhynchus</td><td>kisutch     </td><td> 60         </td><td>27.5        </td><td> 49.4       </td><td>-123.40     </td><td> 0.00       </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Let’s load in the ocean temp data as well. We will need to see for what range of latitude and longitude we will need to filter for. This data was processed and created in the <a class="reference internal" href="Ocean_Temperature.html"><span class="doc std std-doc">Ocean Temperature Data Exploring</span></a> chapter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">temperature_data</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/nav_temp_joined_processed.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">,</span><span class="n">mean_deg_lat</span><span class="p">,</span> <span class="n">mean_deg_long</span><span class="p">,</span> <span class="n">mean_ext</span> <span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  mean_deg_lat   mean_deg_long      mean_ext    
+ Min.   :31.54   Min.   :117.2   Min.   :10.17  
+ 1st Qu.:34.14   1st Qu.:121.0   1st Qu.:13.35  
+ Median :37.97   Median :123.6   Median :14.92  
+ Mean   :39.75   Mean   :123.3   Mean   :15.28  
+ 3rd Qu.:45.38   3rd Qu.:125.1   3rd Qu.:16.71  
+ Max.   :52.64   Max.   :130.8   Max.   :21.71  
+ NA&#39;s   :452     NA&#39;s   :526                    
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we round the latitude &amp; longitude by <code class="docutils literal notranslate"><span class="pre">round_down_min</span> <span class="pre">-</span> <span class="pre">1</span></code>, and <code class="docutils literal notranslate"><span class="pre">round_up_max</span> <span class="pre">+</span> <span class="pre">1</span></code>:</p>
+<ul class="simple">
+<li><p>The range for latitude can be summarized as 30 ~ 54.</p></li>
+<li><p>The range for longitude can be summarized as 116 ~ 132.</p></li>
+</ul>
+<p>Then, we can ask for all of the unique genus found within this range.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">global_term_data</span><span class="p">,</span> <span class="nf">between</span><span class="p">(</span><span class="n">lat_max</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="m">54</span><span class="p">),</span> <span class="nf">between</span><span class="p">(</span><span class="n">long_max</span><span class="p">,</span> <span class="m">116</span><span class="p">,</span> <span class="m">132</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">distinct</span><span class="p">(</span><span class="n">Genus</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Genus</th></tr></thead>
+<tbody>
+	<tr><td>Plestiodon   </td></tr>
+	<tr><td>Sphenomorphus</td></tr>
+	<tr><td>Eremias      </td></tr>
+	<tr><td>Takydromus   </td></tr>
+	<tr><td>Apodemus     </td></tr>
+	<tr><td>Myodes       </td></tr>
+	<tr><td>Cricetulus   </td></tr>
+	<tr><td>Meriones     </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Unfortunately, the list of genus does not contain any algae.</p>
+<p>By expanding the range, however…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">global_term_data</span><span class="p">,</span> <span class="nf">between</span><span class="p">(</span><span class="n">lat_max</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="m">60</span><span class="p">),</span> <span class="nf">between</span><span class="p">(</span><span class="n">long_max</span><span class="p">,</span> <span class="m">120</span><span class="p">,</span> <span class="m">140</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">distinct</span><span class="p">(</span><span class="n">Genus</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Genus</th></tr></thead>
+<tbody>
+	<tr><td>Engraulis       </td></tr>
+	<tr><td>Sardinops       </td></tr>
+	<tr><td>Acridotheres    </td></tr>
+	<tr><td>Pycnonotus      </td></tr>
+	<tr><td>Chondracanthus  </td></tr>
+	<tr><td>Paratrechina    </td></tr>
+	<tr><td>Pheidole        </td></tr>
+	<tr><td>Pristomyrmex    </td></tr>
+	<tr><td>Technomyrmex    </td></tr>
+	<tr><td>Tetramorium     </td></tr>
+	<tr><td>Drosophila      </td></tr>
+	<tr><td>Scaptodrosophila</td></tr>
+	<tr><td>Plestiodon      </td></tr>
+	<tr><td>Takydromus      </td></tr>
+	<tr><td>Sphenomorphus   </td></tr>
+	<tr><td>Protobothrops   </td></tr>
+	<tr><td>Trimeresurus    </td></tr>
+	<tr><td>Apodemus        </td></tr>
+	<tr><td>Myodes          </td></tr>
+	<tr><td>myagropsis      </td></tr>
+	<tr><td>Sargassum       </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>We gain these three algae genuses.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.britannica.com/science/Sargassum">Sargassum</a></p></li>
+<li><p><a class="reference external" href="http://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=372020">myagropsis</a></p></li>
+<li><p><a class="reference external" href="https://www.algaebase.org/search/species/detail/?species_id=127">Chondracanthus</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">algae_west_coast</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">global_term_data</span><span class="p">,</span> 
+       <span class="n">Genus</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Sargassum&quot;</span><span class="p">,</span> <span class="s">&quot;myagropsis&quot;</span><span class="p">,</span> <span class="s">&quot;Chondracanthus&quot;</span><span class="p">),</span>
+      <span class="n">long_max</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">Genus</span><span class="p">,</span> <span class="n">Species</span><span class="p">,</span> <span class="n">Tmax</span><span class="p">)</span>
+
+<span class="n">algae_west_coast</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Genus</th><th scope=col>Species</th><th scope=col>Tmax</th></tr></thead>
+<tbody>
+	<tr><td>Chondracanthus</td><td>intermedius   </td><td>31.3          </td></tr>
+	<tr><td>myagropsis    </td><td>Myagroides    </td><td>30.0          </td></tr>
+	<tr><td>Sargassum     </td><td>fulvellum     </td><td>30.0          </td></tr>
+	<tr><td>Sargassum     </td><td>hemiphyllum   </td><td>27.0          </td></tr>
+	<tr><td>Sargassum     </td><td>horneri       </td><td>27.0          </td></tr>
+	<tr><td>Sargassum     </td><td>macrocarpum   </td><td>31.0          </td></tr>
+	<tr><td>Sargassum     </td><td>micracanthum  </td><td>27.0          </td></tr>
+	<tr><td>Sargassum     </td><td>patens        </td><td>31.0          </td></tr>
+	<tr><td>Sargassum     </td><td>piluliferum   </td><td>30.0          </td></tr>
+	<tr><td>Sargassum     </td><td>thunbergii    </td><td>31.0          </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>With a quick glance at this table, we can see that the max mean of min temperature during the heatwave (21.71) never exceeded the max temperatures of these species.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>datetime</th><th scope=col>mean_ext</th><th scope=col>mean_lat</th><th scope=col>mean_long</th><th scope=col>mean_deg_lat</th><th scope=col>mean_deg_long</th></tr></thead>
+<tbody>
+	<tr><td>2021-06-13 00:00:20</td><td>18.94975           </td><td>32.40404           </td><td>117.1328           </td><td>32.67333           </td><td>117.2213           </td></tr>
+	<tr><td>2021-06-13 00:00:21</td><td>18.81057           </td><td>32.39704           </td><td>117.1738           </td><td>32.66167           </td><td>117.2897           </td></tr>
+	<tr><td>2021-06-13 00:00:22</td><td>19.17494           </td><td>32.39495           </td><td>117.1988           </td><td>32.65833           </td><td>117.3313           </td></tr>
+	<tr><td>2021-06-13 00:00:23</td><td>19.26122           </td><td>32.39151           </td><td>117.2244           </td><td>32.65250           </td><td>117.3740           </td></tr>
+	<tr><td>2021-06-13 00:00:24</td><td>19.28124           </td><td>32.39131           </td><td>117.2250           </td><td>32.65217           </td><td>117.3750           </td></tr>
+	<tr><td>2021-06-13 00:00:25</td><td>19.20406           </td><td>32.39111           </td><td>117.2255           </td><td>32.65183           </td><td>117.3758           </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="other-studies-of-algae-species-near-bc-and-the-pacific-coast">
+<h2>Other Studies of Algae Species near BC and the Pacific Coast<a class="headerlink" href="#other-studies-of-algae-species-near-bc-and-the-pacific-coast" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sargassum-horneri">
+<h3><em>Sargassum horneri</em><a class="headerlink" href="#sargassum-horneri" title="Permalink to this headline">¶</a></h3>
+<p>To further support <em>Sargassum horneri</em>’s temperature tolerance, <a class="reference external" href="https://doi.org/10.1111/jpy.13148">a more recent study by Sadie L. Small and Matthew S. Edwards in 2021</a> found that total mortality ranges around 28–30°C, with 15–20°C to be the optimal temperature range for germling development (germling development maxing out around 25°C).</p>
+</div>
+<div class="section" id="dinoflagellates-of-genus-alexandrium-in-the-salish-sea">
+<h3>Dinoflagellates of genus <em>Alexandrium</em> in the Salish Sea<a class="headerlink" href="#dinoflagellates-of-genus-alexandrium-in-the-salish-sea" title="Permalink to this headline">¶</a></h3>
+<p><sub>Also known as <i>A. tamarense</i> or <i>A. fundyense</i> or <i>A. catenella</i>.</sub></p>
+<p>In a <a class="reference external" href="https://doi.org/10.1111/jpy.12386">2016 study by Brian D. Bill et. al.</a> referenced Noris and Chew’s work in 1975 about how “optimal temperature and salinity ranges for growth were between 13°C and 17°C temperature and 15–40 salinity”. The researchers have also found that “growth of both isolates was inhibited at temperatures below ~7.7°C and above ~24°C” where being above ~24°C resulted in “growth rates dropped abruptly to near zero” in some strains.</p>
+</div>
+<div class="section" id="phaeodactylum-tricornutum">
+<h3><em>Phaeodactylum tricornutum</em><a class="headerlink" href="#phaeodactylum-tricornutum" title="Permalink to this headline">¶</a></h3>
+<p>Another study, <a class="reference external" href="https://doi.org/10.1515/bot.2011.037">conducted in 2011 by Gudrun Kräbs and Claudia Büchel</a>, focused on the eco-physiology of <em>Phaeodactylum tricornutum</em> and looked at it’s three strains isolated in Vancouver (NE Pacific Ocean), Plymouth (NE Atlantic Ocean) and Guam (tropical western Pacific Ocean).</p>
+<blockquote>
+<div><p>“The Vancouver and Plymouth strains are from cold-temperate conditions where water-temperature is between 10°C and in winter and 15°C in the summer” (p. 232). “Cultures of each strain were exposed to a combination of temperatures ranging from 12°C to 30°C.”</p>
+</div></blockquote>
+<p>At 24°C, the Vancouver strain started to see some vitality declines, with 30°C straining it to it’s limits while the other strains tolerated, albeit not ideal conditions (p. 234-235).</p>
+</div>
+<div class="section" id="calliarthron-tuberculosum-corallina-vancouveriensis">
+<h3><em>Calliarthron tuberculosum &amp; Corallina vancouveriensis</em><a class="headerlink" href="#calliarthron-tuberculosum-corallina-vancouveriensis" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://doi.org/10.1111/jpy.12161">This study by Rebecca J. Guenther and Patrick T. Martone in 2013</a> looked at aerial exposure during low tide in tidepools, and the warming of water during which the coralline algae (<em>Calliarthron tuberculosum &amp; Corallina vancouveriensis</em>) would be submerged/exposed and found that:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aerial Exposure</p></th>
+<th class="head"><p>Warming Tidepool Water (submerged)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Calliarthron is extremely sensitive</p></td>
+<td><p>Calliarthron is stressed</p></td>
+</tr>
+<tr class="row-odd"><td><p>Corallina is somewhat stressed</p></td>
+<td><p>Corallina is not stressed</p></td>
+</tr>
+</tbody>
+</table>
+<center><sub>See section "Recovery when the tide returns" (Guenther & Martone, 2013) .</sub></center>
+<p>but they have also pointed out that:</p>
+<blockquote>
+<div><p>“Neither Corallina nor Calliarthron recovered photosynthesis after emersion as rapidly as other intertidal algae, such as <em>Mastocarpus papillatus</em>, <em>Endocladia muricata</em>, <em>Fucus serratus</em>, and <em>Fucus spiralis</em>”.</p>
+</div></blockquote>
+<center><b>Photosynthetic rate after submersion:</b></center>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Species</p></th>
+<th class="head"><p>Photosynthetic rate (12°C)</p></th>
+<th class="head"><p>Photosynthetic rate (20°C)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Calliarthron</p></td>
+<td><p>1.40 ± 0.29</p></td>
+<td><p>1.13 ± 0.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>Corallina</p></td>
+<td><p>1.77 ± 0.12</p></td>
+<td><p>1.93 ± 0.07</p></td>
+</tr>
+</tbody>
+</table>
+<center><sub><b>Photosynthetic rate units:</b> $\frac{\text{μmol of }O^2}{\text{(gDW · min)}}$</sub></center></div>
+</div>
+<div class="section" id="temperature-tolerance-studies-on-predators">
+<h2>Temperature Tolerance Studies on Predators<a class="headerlink" href="#temperature-tolerance-studies-on-predators" title="Permalink to this headline">¶</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This section is a work in progress.</p>
+</div>
+<p><a class="reference external" href="http://dx.doi.org/10.1002/ece3.6498">Potential predators</a> and their tolerance for ocean temperatures.</p>
+<ul class="simple">
+<li><p>Nucella lamellosa</p></li>
+<li><p>Littorina scutulata</p></li>
+<li><p>Littorina sitkana</p></li>
+<li><p>Balanus glandula</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Kaede Ito<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

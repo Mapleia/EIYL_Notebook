@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecology In Your Life - BIOL 230 &#8212; Ecology in My Life</title>
+    <title>Project Info &amp; Setup &#8212; Ecology in My Life</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Ecology In Your Life - BIOL 230 W2021" href="Ecology_In_Your_Life.html" />
+    <link rel="next" title="Overview" href="Ecology_In_Your_Life.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -86,14 +86,24 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   Ecology In Your Life - BIOL 230
+   Project Info &amp; Setup
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Ecology_In_Your_Life.html">
-   Ecology In Your Life - BIOL 230 W2021
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ocean_Temperature.html">
+   Ocean Temperature Data Exploring
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Discussion.html">
+   Discussion on Ocean Temperatures &amp; Algae
   </a>
  </li>
 </ul>
@@ -180,24 +190,36 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Ecology In Your Life - BIOL 230
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#recommended-anaconda">
      Recommended: Anaconda
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#docker-container">
      Docker container
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-to-github-pages">
+   Importing to Github Pages
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#following-this-tutorial">
+     Following this tutorial:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alternative-way">
+     Alternative way:
     </a>
    </li>
   </ul>
@@ -213,42 +235,65 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="ecology-in-your-life-biol-230">
-<h1>Ecology In Your Life - BIOL 230<a class="headerlink" href="#ecology-in-your-life-biol-230" title="Permalink to this headline">¶</a></h1>
-<p>Author: Kaede Ito</p>
-<p>Winter 2021</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="project-info-setup">
+<h1>Project Info &amp; Setup<a class="headerlink" href="#project-info-setup" title="Permalink to this headline">¶</a></h1>
+<p>See the notebook online <a class="reference external" href="https://mapleia.github.io/EIYL_Notebook/README.html">here</a>!</p>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="recommended-anaconda">
-<h2>Recommended: Anaconda<a class="headerlink" href="#recommended-anaconda" title="Permalink to this headline">¶</a></h2>
+<h3>Recommended: Anaconda<a class="headerlink" href="#recommended-anaconda" title="Permalink to this headline">¶</a></h3>
 <ol>
 <li><p><a class="reference external" href="https://docs.anaconda.com/anaconda/install/index.html">Install Anaconda</a>, a Python environment manager.</p></li>
 <li><p><a class="reference external" href="https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/">Setup</a> a <a class="reference external" href="https://www.r-project.org/">R</a> environment with conda.</p>
-<p>a) Follow the R Notebook tutorial up until it tells you to create a notebook in the browser.</p>
-<p>b) With the browser UI, navigate to where this notebook is located.</p>
+<p>a) Follow the R Notebook tutorial up until it tells you to create a notebook in the browser (use <code class="docutils literal notranslate"><span class="pre">v3.7.11</span> <span class="pre">Python</span></code> and the latest <code class="docutils literal notranslate"><span class="pre">R</span></code> if you are running the jupyter-notebook on Windows 10.)</p>
+<blockquote>
+<div><p>This is due to an dependency error for Python &gt;=v3.8. Read more about the issue <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/906">here</a>.</p>
+</div></blockquote>
 </li>
-<li><p>Install r packages through Anaconda.</p>
+<li><p>Install R packages through Anaconda.</p>
 <p>a) Open your commandline (Anaconda installation comes with one).</p>
 <p>b) Activate your notebook env.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">name_of_your_env_you_created</span>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">name_of_your_env_you_created</span>
 </pre></div>
 </div>
 <p>c) Install the following R packages.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">r</span> <span class="n">r</span><span class="o">-</span><span class="n">tidyverse</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">r</span> <span class="n">r</span><span class="o">-</span><span class="n">lubridate</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">r</span> <span class="n">r</span><span class="o">-</span><span class="n">ggplot2</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">r</span> <span class="n">r</span><span class="o">-</span><span class="n">plotly</span>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">-c</span> <span class="nb">r </span><span class="n">r-tidyverse</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">-c</span> <span class="nb">r </span><span class="n">r-lubridate</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">-c</span> <span class="nb">r </span><span class="n">r-ggplot2</span> <span class="c"># (you might not need to install this one, depending on what is pre-installed for you by Anaconda)</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">-c</span> <span class="nb">r </span><span class="n">r-plotly</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">-c</span> <span class="n">conda-forge</span> <span class="n">r-cowplot</span>
 </pre></div>
 </div>
 </li>
-<li><p>Edit the notebook in the browser as you please!</p></li>
+<li><p>Install GitHub Pages importer to build from code to HTML.</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">-c</span> <span class="n">conda-forge</span> <span class="n">ghp-import</span>
+</pre></div>
+</div>
+</li>
+<li><p>Edit the notebook in the browser (or your jupyter supported editor/IDE) as you please!</p></li>
 </ol>
 </div>
 <div class="section" id="docker-container">
-<h2>Docker container<a class="headerlink" href="#docker-container" title="Permalink to this headline">¶</a></h2>
-<p>Coming soon!
-<a class="reference external" href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html">https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html</a></p>
+<h3>Docker container<a class="headerlink" href="#docker-container" title="Permalink to this headline">¶</a></h3>
+<p>Coming soon!</p>
+<p><a class="reference external" href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html">https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html</a></p>
+</div>
+</div>
+<div class="section" id="importing-to-github-pages">
+<h2>Importing to Github Pages<a class="headerlink" href="#importing-to-github-pages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="following-this-tutorial">
+<h3>Following <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html">this tutorial</a>:<a class="headerlink" href="#following-this-tutorial" title="Permalink to this headline">¶</a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code></p>
+<p>after every major update in the notebook to publish the new version.</p>
+</div>
+<div class="section" id="alternative-way">
+<h3>Alternative way:<a class="headerlink" href="#alternative-way" title="Permalink to this headline">¶</a></h3>
+<p>With the right conda env activated, make sure that you have an installation of <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>.</p>
+<blockquote>
+<div><p><strong>Conda</strong>: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">jupyter-book</span></code></p>
+</div></blockquote>
+<p>Then, run <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span> <span class="pre">build</span> <span class="pre">C:/ABSOLUTE/PATH/TO/PROJECT/FOLDER</span></code></p>
+</div>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -282,7 +327,7 @@
     <a class='right-next' id="next-link" href="Ecology_In_Your_Life.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ecology In Your Life - BIOL 230 W2021</p>
+        <p class="prev-next-title">Overview</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

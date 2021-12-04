@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ocean Temperature Data Exploring &#8212; Ecology in My Life</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Discussion on Ocean Temperatures &amp; Algae" href="Discussion.html" />
+    <link rel="prev" title="Overview" href="Ecology_In_Your_Life.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Ecology in My Life</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Project Info &amp; Setup
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ecology_In_Your_Life.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ocean Temperature Data Exploring
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Discussion.html">
+   Discussion on Ocean Temperatures &amp; Algae
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="_sources/Ocean_Temperature.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Ocean_Temperature.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Mapleia/EIYL_Notebook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Mapleia/EIYL_Notebook/master?urlpath=tree/Ocean_Temperature.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-and-wrangling-data">
+   Reading and Wrangling Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualize-the-data">
+   Visualize the Data
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="ocean-temperature-data-exploring">
+<h1>Ocean Temperature Data Exploring<a class="headerlink" href="#ocean-temperature-data-exploring" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Analysis and visualization was done using R and various packages. The following is the script used to generate 2 scatterplot graphs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span> 
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</div>
+<div class="section" id="reading-and-wrangling-data">
+<h2>Reading and Wrangling Data<a class="headerlink" href="#reading-and-wrangling-data" title="Permalink to this headline">¶</a></h2>
+<p>Temperature data is found in the <code class="docutils literal notranslate"><span class="pre">&quot;data&quot;</span></code> folder, while coordinates (and the time recorded) are in the <code class="docutils literal notranslate"><span class="pre">&quot;data/nav&quot;</span></code> folder.</p>
+<p>All of the temperature data was cleaned using a <code class="docutils literal notranslate"><span class="pre">Python</span></code> script, located in the <code class="docutils literal notranslate"><span class="pre">data_cleaning</span></code> folder. No packages were used, and can be used as long as a v3.9 Python is installed (anything above or below is untested) and the scripts are pointed to the right data sources. <em>Unfortunately, the version where Jupyter runs on Windows (v3.7 Python) and the data cleaner (v3.9 Python) is different.</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data/temp_processed_summarized.csv</span></code>: mean temp over min</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data/temp_processed.csv</span></code>: all temp</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data/nav/nav_processed.csv</span></code>: mean GPS over min</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data/nav_temp_joined_processed.csv</span></code>: joined mean temp &amp; GPS over min</p></li>
+</ul>
+<p>The dates are all of type <code class="docutils literal notranslate"><span class="pre">character</span></code>, meaning extracting any use without it being a proper <code class="docutils literal notranslate"><span class="pre">date</span></code> type is hard. Therefore, time and date must be formatted.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">format_datetime</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">df_new</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">%&gt;%</span>
+    <span class="c1"># https://www.neonscience.org/resources/learning-hub/tutorials/dc-time-series-subset-dplyr-r</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">date</span> <span class="o">=</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&#39;%m/%d/%Y&#39;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="c1"># https://www.tidyverse.org/blog/2021/03/clock-0-1-0/</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">datetime</span> <span class="o">=</span> <span class="nf">as.POSIXct</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="s">&quot;America/Vancouver&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">datetime</span> <span class="o">=</span> <span class="n">datetime</span> <span class="o">+</span><span class="nf">hour</span><span class="p">(</span><span class="n">time</span><span class="p">)</span><span class="o">+</span> <span class="nf">minute</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
+  
+  <span class="nf">return</span><span class="p">(</span><span class="n">df_new</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following are all of the functions needed to clean up 1 temperature file. However, we have quite a few files, and trying to clean and instantiate each by hand is cumbersome. Therefore, we will iterate through all of the files and summarize.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please keep in mind that the following code blocks will take pretty long to run.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">clean_SBE45_data</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">read</span> <span class="o">&lt;-</span> <span class="nf">read_delim</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span> 
+                     <span class="n">col_names</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;date&quot;</span><span class="p">,</span> 
+                                    <span class="s">&quot;time&quot;</span><span class="p">,</span> 
+                                    <span class="s">&quot;int_temp&quot;</span><span class="p">,</span> 
+                                    <span class="s">&quot;conductivity&quot;</span><span class="p">,</span>
+                                    <span class="s">&quot;salinity&quot;</span><span class="p">,</span>
+                                    <span class="s">&quot;sound_vel&quot;</span><span class="p">,</span>
+                                    <span class="s">&quot;ext_temp&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">ext_temp</span><span class="p">)</span>
+  <span class="nf">return</span><span class="p">(</span><span class="n">read</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">clean_STT_TSG_data</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">read</span> <span class="o">&lt;-</span> <span class="nf">read_delim</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span>
+                     <span class="n">col_names</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;date&quot;</span><span class="p">,</span>
+                                   <span class="s">&quot;time&quot;</span><span class="p">,</span>
+                                   <span class="s">&quot;type&quot;</span><span class="p">,</span>
+                                   <span class="s">&quot;diff&quot;</span><span class="p">,</span>
+                                   <span class="s">&quot;ext_temp&quot;</span><span class="p">,</span>
+                                   <span class="s">&quot;int_temp&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">ext_temp</span><span class="p">)</span>    
+  <span class="nf">return</span><span class="p">(</span><span class="n">read</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">clean_temp_data</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1"># https://stackoverflow.com/questions/10128617/test-if-characters-are-in-a-string</span>
+  <span class="nf">if</span><span class="p">(</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;SBE45-TSG-MSG&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">fixed</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nf">return</span><span class="p">(</span><span class="nf">clean_SBE45_data</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+  <span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
+    <span class="nf">return</span><span class="p">(</span><span class="nf">clean_STT_TSG_data</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is the data before it is summarized by the minute.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://stackoverflow.com/questions/11433432/how-to-import-multiple-csv-files-at-once</span>
+<span class="n">all_temperature_loaded</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;data/&quot;</span><span class="p">,</span>
+             <span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;*.Raw&quot;</span><span class="p">,</span>
+             <span class="n">full.names</span> <span class="o">=</span> <span class="bp">T</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">map_df</span><span class="p">(</span><span class="o">~</span><span class="nf">clean_temp_data</span><span class="p">(</span><span class="n">.</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">all_temperature_loaded</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">all_temperature_loaded</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_temperature_cleaned</span> <span class="o">&lt;-</span> <span class="n">all_temperature_loaded</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">ext_temp</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">ext_temp</span> <span class="o">&gt;</span> <span class="m">2</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">format_datetime</span><span class="p">()</span>
+
+<span class="nf">write_csv</span><span class="p">(</span><span class="n">all_temperature_cleaned</span><span class="p">,</span> <span class="s">&quot;data/temp_processed.csv&quot;</span><span class="p">)</span>
+
+<span class="n">all_temperature</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">all_temperature_cleaned</span><span class="p">,</span> <span class="n">datetime</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">summarize</span><span class="p">(</span><span class="n">mean_ext</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">ext_temp</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
+
+<span class="nf">write_csv</span><span class="p">(</span><span class="n">all_temperature</span><span class="p">,</span> <span class="s">&quot;data/temp_processed_summarized.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">all_temperature</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">all_temperature</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>All of the navigation files will also be cleaned up and summarized in similar manner to the temperature files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">clean_nav_data</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">read</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> 
+                   <span class="n">col_names</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span>
+                     <span class="s">&quot;date&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;time&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;type&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;time_num&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;lat&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;lat_NS&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;long&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;long_WE&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;gps_quality&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;num_sat_view&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;hort_dil&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;ant_alt&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;ant_alt_unit&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;geoidal&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;geoidal_unit&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;age_diff&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;diff_station&quot;</span><span class="p">,</span>
+                     <span class="s">&quot;checksum&quot;</span>
+                   <span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">long</span><span class="p">)</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">read</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_nav_loaded</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;data/nav/&quot;</span><span class="p">,</span>
+                      <span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;*.Raw&quot;</span><span class="p">,</span>
+                      <span class="n">full.names</span> <span class="o">=</span> <span class="bp">T</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">map_df</span><span class="p">(</span><span class="o">~</span><span class="nf">clean_nav_data</span><span class="p">(</span><span class="n">.</span><span class="p">))</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">all_nav</span> <span class="o">&lt;-</span> <span class="n">all_nav_loaded</span> <span class="o">%&gt;%</span>
+    <span class="nf">format_datetime</span><span class="p">()</span> <span class="o">%&gt;%</span>
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">datetime</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">summarize</span><span class="p">(</span><span class="n">mean_lat</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span> <span class="n">mean_long</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">long</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">mean_lat</span> <span class="o">=</span> <span class="n">mean_lat</span><span class="o">/</span><span class="m">100</span><span class="p">,</span> <span class="n">mean_long</span> <span class="o">=</span> <span class="n">mean_long</span><span class="o">/</span><span class="m">100</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">deg_lat_int</span> <span class="o">=</span> <span class="nf">trunc</span><span class="p">(</span><span class="n">mean_lat</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span>
+           <span class="n">deg_long_int</span> <span class="o">=</span> <span class="nf">trunc</span><span class="p">(</span><span class="n">mean_long</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">deg_lat_dec</span> <span class="o">=</span> <span class="nf">round</span><span class="p">((</span><span class="n">mean_lat</span> <span class="o">-</span> <span class="n">deg_lat_int</span><span class="p">)</span> <span class="o">*</span> <span class="m">10000</span><span class="p">),</span>
+           <span class="n">deg_long_dec</span> <span class="o">=</span> <span class="nf">round</span><span class="p">((</span><span class="n">mean_long</span> <span class="o">-</span> <span class="n">deg_long_int</span><span class="p">)</span> <span class="o">*</span> <span class="m">10000</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">mean_deg_lat</span> <span class="o">=</span> <span class="n">deg_lat_int</span> <span class="o">+</span> <span class="n">deg_lat_dec</span><span class="o">/</span><span class="p">(</span><span class="m">60</span> <span class="o">*</span> <span class="m">100</span><span class="p">),</span>
+          <span class="n">mean_deg_long</span> <span class="o">=</span> <span class="n">deg_long_int</span> <span class="o">+</span> <span class="n">deg_long_dec</span> <span class="o">/</span> <span class="p">(</span><span class="m">60</span> <span class="o">*</span> <span class="m">100</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">deg_lat_int</span><span class="p">,</span> <span class="o">-</span><span class="n">deg_long_int</span><span class="p">,</span> <span class="o">-</span><span class="n">deg_lat_dec</span><span class="p">,</span> <span class="o">-</span><span class="n">deg_long_dec</span><span class="p">)</span>
+
+
+<span class="nf">write_csv</span><span class="p">(</span><span class="n">all_nav</span><span class="p">,</span> <span class="s">&quot;data/nav/nav_processed.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">all_nav</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">all_nav</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since we have the date and time (by the minute) of both the temperature and it’s coordinates, we can match the two variables together.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">joined_temp_nav</span> <span class="o">&lt;-</span> <span class="nf">inner_join</span><span class="p">(</span><span class="n">all_temperature</span><span class="p">,</span> 
+                             <span class="n">all_nav</span><span class="p">,</span>
+                             <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;datetime&quot;</span> <span class="o">=</span> <span class="s">&quot;datetime&quot;</span><span class="p">))</span>
+
+<span class="nf">write_csv</span><span class="p">(</span><span class="n">joined_temp_nav</span><span class="p">,</span> <span class="s">&quot;data/nav_temp_joined_processed.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">joined_temp_nav</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">joined_temp_nav</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualize-the-data">
+<h2>Visualize the Data<a class="headerlink" href="#visualize-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Time and mean temperature plotted on a scatterplot to see temperature changes over time. Notice that since the ship moves in 1 way vs time, the shape of the 2D scatterplot and the 3D plot is very similar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">time_plot</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">all_temperature</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">,</span> 
+                                         <span class="n">y</span> <span class="o">=</span> <span class="n">mean_ext</span><span class="p">,</span> 
+                                         <span class="n">colour</span> <span class="o">=</span> <span class="n">mean_ext</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">scale_colour_gradient</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Date and Time PST&quot;</span><span class="p">,</span> 
+       <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Mean (by the min) Ocean Temperature (celcius)&quot;</span><span class="p">,</span>
+       <span class="n">colour</span> <span class="o">=</span> <span class="s">&quot;Mean External Temperature&quot;</span><span class="p">)</span>
+<span class="n">time_plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">&lt;-</span> <span class="nf">plot_ly</span><span class="p">(</span><span class="n">joined_temp_nav</span><span class="p">,</span> 
+        <span class="n">x</span> <span class="o">=</span> <span class="o">~</span><span class="n">mean_lat</span><span class="p">,</span> 
+        <span class="n">y</span> <span class="o">=</span> <span class="o">~</span><span class="n">mean_long</span><span class="p">,</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="o">~</span><span class="n">mean_ext</span><span class="p">,</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="o">~</span><span class="n">mean_ext</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">add_markers</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">0.7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">embed_notebook</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Ecology_In_Your_Life.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Overview</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Discussion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Discussion on Ocean Temperatures &amp; Algae</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Kaede Ito<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
