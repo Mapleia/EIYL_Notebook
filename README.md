@@ -24,12 +24,14 @@ See the notebook online [here](https://mapleia.github.io/EIYL_Notebook/README.ht
     conda install -c r r-lubridate
     conda install -c r r-ggplot2 # (you might not need to install this one, depending on what is pre-installed for you by Anaconda)
     conda install -c r r-plotly
+    conda install -c conda-forge r-cowplot
     ```
 4. Install GitHub Pages importer to build from code to HTML.
     ```powershell
     conda install -c conda-forge ghp-import
     ```
 5. Edit the notebook in the browser (or your jupyter supported editor/IDE) as you please!
+
 
 ### Docker container
 Coming soon!
@@ -40,17 +42,12 @@ https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html
 ## Importing to Github Pages
 ### Following [this tutorial](https://jupyterbook.org/publish/gh-pages.html):
 
-Run
-```powershell
-ghp-import -n -p -f _build/html
-```
+Run `ghp-import -n -p -f _build/html`
+
 after every major update in the notebook to publish the new version.
 
 ### Alternative way:
 With the right conda env activated, make sure that you have an installation of `jupyter-notebook`.
 > **Conda**: `conda install -c conda-forge jupyter-book`
 
-Then, run
-```powershell
-jupyter-notebook build C:/ABSOLUTE/PATH/TO/PROJECT/FOLDER
-```
+Then, run `jupyter-notebook build C:/ABSOLUTE/PATH/TO/PROJECT/FOLDER`

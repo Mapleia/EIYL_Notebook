@@ -2,3 +2,5 @@ format: jb-book
 root: README
 chapters:
 - file: Ecology_In_Your_Life
+- file: Ocean_Temperature
+- file: Discussion
