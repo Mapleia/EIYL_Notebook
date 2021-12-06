@@ -1,6 +1,6 @@
 # Project Info & Setup
 See the notebook online [here](https://mapleia.github.io/EIYL_Notebook/README.html)!
-## Setup
+## Install and Environment Setup
 ### Recommended: Anaconda
 1. [Install Anaconda](https://docs.anaconda.com/anaconda/install/index.html), a Python environment manager.
 2. [Setup](https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/) a [R](https://www.r-project.org/) environment with conda.
@@ -26,28 +26,24 @@ See the notebook online [here](https://mapleia.github.io/EIYL_Notebook/README.ht
     conda install -c r r-plotly
     conda install -c conda-forge r-cowplot
     ```
-4. Install GitHub Pages importer to build from code to HTML.
-    ```powershell
-    conda install -c conda-forge ghp-import
-    ```
-5. Edit the notebook in the browser (or your jupyter supported editor/IDE) as you please!
-
-
-### Docker container
-Coming soon!
-
-https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html
+4. Edit the notebook in the browser (or your jupyter supported editor/IDE) as you please!
 
 
 ## Importing to Github Pages
 ### Following [this tutorial](https://jupyterbook.org/publish/gh-pages.html):
 
-Run `ghp-import -n -p -f _build/html`
+Run these steps after every major update to publish the changes.
 
-after every major update in the notebook to publish the new version.
+```
+{attention}
+With the right conda env activated, make sure that you have an installation of `jupyter-book`.
+> **Conda**: `conda install -c conda-forge jupyter-book`.
+```
+1. In a terminal (with the conda environment activated), move to the notebook directory.
+    ```
+    cd C:/ABSOLUTE/PATH/TO/PROJECT/ROOT/FOLDER
+    ```
+2. Run `jupyter-book build .`.
+3. Run `ghp-import -n -p -f _build/html` .
 
-### Alternative way:
-With the right conda env activated, make sure that you have an installation of `jupyter-notebook`.
-> **Conda**: `conda install -c conda-forge jupyter-book`
 
-Then, run `jupyter-notebook build C:/ABSOLUTE/PATH/TO/PROJECT/FOLDER`
