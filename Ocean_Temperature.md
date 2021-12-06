@@ -34,7 +34,7 @@ options(repr.plot.width=10, repr.plot.height=6)
 
 +++
 
-Temperature data is found in the `"data"` folder, while coordinates (and the time recorded) are in the `"data/nav"` folder.
+Temperature data {cite}`Dewees2021` is found in the `"data"` folder, while coordinates (and the time recorded) are in the `"data/nav"` folder.
 
 All of the temperature data was cleaned using a `Python` script, located in the `data_cleaning` folder. No packages were used, and can be used as long as a v3.9 Python is installed (anything above or below is untested) and the scripts are pointed to the right data sources. *Unfortunately, the version where Jupyter runs on Windows (v3.7 Python) and the data cleaner (v3.9 Python) is different.*
 

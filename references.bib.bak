@@ -45,7 +45,7 @@
 }
 
 @Article{Bennett2018,
-  author    = {Joanne M. Bennett and Piero Calosi and Susana Clusella-Trullas and Brezo Mart{\'{\i}}nez and Jennifer Sunday and Adam C. Algar and Miguel B. Ara{\'{u}}jo and Bradford A. Hawkins and Sally Keith and Ingolf Kühn and Carsten Rahbek and Laura Rodr{\'{\i}}guez and Alexander Singer and Fabricio Villalobos and Miguel {\'{A}}ngel Olalla-T{\'{a}}rraga and Ignacio Morales-Castilla},
+  author    = {Joanne M. Bennett and Piero Calosi and Susana Clusella-Trullas and Brezo Martínez and Jennifer Sunday and Adam C. Algar and Miguel B. Araújo and Bradford A. Hawkins and Sally Keith and Ingolf Kühn and Carsten Rahbek and Laura Rodríguez, and Alexander Singer and Fabricio Villalobos and Miguel Ángel Olalla-Tárraga and Ignacio Morales-Castilla},
   journal   = {Scientific Data},
   title     = {{GlobTherm}, a global database on thermal tolerances for aquatic and terrestrial organisms},
   year      = {2018},
@@ -70,13 +70,14 @@
   publisher = {Walter de Gruyter {GmbH}},
 }
 
-@Article{Dewees2021,
-  author  = {Bryce Dewees and {NOAA Office of Marine and Aviation Operations}},
-  journal = {{NOAA National Centers for Environmental Information} Dataset},
-  title   = {Underway meteorological, navigational, optical, physical, and time series data collected aboard NOAA Ship Ronald H. Brown in the Coastal Waters of Southeast Alaska and British Columbia, Columbia River estuary - Washington/Oregon and others from 2021-06-13 to 2021-07-26 (NCEI Accession 0240415)},
-  year    = {2021},
-  groups  = {Used},
-  url     = {https://www.ncei.noaa.gov/archive/accession/0240415},
+@TechReport{Dewees2021,
+  author      = {Bryce Dewees and {NOAA Office of Marine and Aviation Operations}},
+  institution = {NOAA National Centers for Environmental Information},
+  title       = {Underway meteorological, navigational, optical, physical, and time series data collected aboard NOAA Ship Ronald H. Brown in the Coastal Waters of Southeast Alaska and British Columbia, Columbia River estuary - Washington/Oregon and others from 2021-06-13 to 2021-07-26 (NCEI Accession 0240415)},
+  year        = {2021},
+  groups      = {Used},
+  journal     = {{NOAA National Centers for Environmental Information} Dataset},
+  url         = {https://www.ncei.noaa.gov/archive/accession/0240415},
 }
 
 @Article{Harley2012,
@@ -133,6 +134,18 @@
   doi       = {10.1111/j.1529-8817.1988.tb04471.x},
   groups    = {Potential},
   publisher = {Wiley},
+}
+
+@Article{Marks2018,
+  author    = {Lindsay Marks and Daniel Reed and Sally Holbrook},
+  journal   = {Aquatic Invasions},
+  title     = {Life history traits of the invasive seaweed Sargassum horneri at Santa Catalina Island, California},
+  year      = {2018},
+  number    = {3},
+  pages     = {339--350},
+  volume    = {13},
+  doi       = {10.3391/ai.2018.13.3.03},
+  publisher = {Regional Euro-Asian Biological Invasions Centre Oy ({REABIC})},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
