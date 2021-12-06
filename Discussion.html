@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Works_Referenced.html" />
     <link rel="prev" title="Algae Temperature Tolerance" href="Algae_Tolerance.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -268,24 +269,18 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">between_15_20</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">,</span> 
-                        <span class="nf">between</span><span class="p">(</span><span class="n">ext_temp</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="m">20</span><span class="p">))</span>
+                        <span class="nf">between</span><span class="p">(</span><span class="n">mean_ext</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="m">20</span><span class="p">))</span>
 <span class="nf">count</span><span class="p">(</span><span class="n">between_15_20</span><span class="p">)</span><span class="o">$</span><span class="n">n</span> <span class="o">/</span> <span class="nf">count</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">)</span><span class="o">$</span><span class="n">n</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">between</span><span class="p">(</span><span class="n">ext_temp</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span> <span class="nb">object</span> <span class="s1">&#39;ext_temp&#39;</span> <span class="ow">not</span> <span class="n">found</span>
-<span class="ne">Traceback</span>:
-
-<span class="mi">1</span><span class="o">.</span> <span class="nb">filter</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">,</span> <span class="n">between</span><span class="p">(</span><span class="n">ext_temp</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
-<span class="mi">2</span><span class="o">.</span> <span class="nb">filter</span><span class="o">.</span><span class="n">tbl_df</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">,</span> <span class="n">between</span><span class="p">(</span><span class="n">ext_temp</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
-<span class="mi">3</span><span class="o">.</span> <span class="n">filter_impl</span><span class="p">(</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">quo</span><span class="p">)</span>
-<span class="mi">4</span><span class="o">.</span> <span class="n">between</span><span class="p">(</span><span class="n">ext_temp</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-</pre></div>
+<div class="output text_html">0.40126861555433</div></div>
 </div>
-</div>
-</div>
-<p>Above calculates the percentage of datapoints that were found to be between 15 ~ 20 (not including), and it finds that <strong>44.5%</strong> of the data points to fit the range of this invasive species.</p>
+<p>Above calculates the percentage of datapoints that were found to be between 15 ~ 20 (not including), and it finds that <strong>40.1%</strong> of the data points to fit the range of this invasive species.</p>
+<blockquote>
+<div><p>Do note that this data is the mean temperature across a minute.</p>
+</div></blockquote>
 </div>
 <div class="section" id="potential-increase-in-toxic-species">
 <h2>Potential Increase in Toxic Species?<a class="headerlink" href="#potential-increase-in-toxic-species" title="Permalink to this headline">¶</a></h2>
@@ -294,19 +289,19 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">between_13_17</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">,</span> 
-                        <span class="nf">between</span><span class="p">(</span><span class="n">ext_temp</span><span class="p">,</span> <span class="m">13</span><span class="p">,</span> <span class="m">17</span><span class="p">))</span>
+                        <span class="nf">between</span><span class="p">(</span><span class="n">mean_ext</span><span class="p">,</span> <span class="m">13</span><span class="p">,</span> <span class="m">17</span><span class="p">))</span>
 <span class="nf">count</span><span class="p">(</span><span class="n">between_13_17</span><span class="p">)</span><span class="o">$</span><span class="n">n</span> <span class="o">/</span> <span class="nf">count</span><span class="p">(</span><span class="n">temperature_data</span><span class="p">)</span><span class="o">$</span><span class="n">n</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">0.604263917919656</div></div>
+<div class="output text_html">0.55819084390513</div></div>
 </div>
-<p>and finds that 60.4% of the data points fit the parameters.</p>
+<p>and finds that <strong>55.8%</strong> of the data points fit the parameters of where they thrive in.</p>
 </div>
 <div class="section" id="potential-decrease-in-native-species">
 <h2>Potential Decrease in Native Species?<a class="headerlink" href="#potential-decrease-in-native-species" title="Permalink to this headline">¶</a></h2>
-<p>Around the same temperature where <em>Alexandrium</em> starts to decline in vitality, so does <em>Phaeodactylum tricornutum</em> (Kräbs &amp; Büchel, 2011). Although not an immediate concern, spikes in temperatures from events like the heatwave could harm the population of <em>Phaeodactylum tricornutum</em> Vancouver’s strain.</p>
+<p>Around the same temperature where <em>Alexandrium</em> starts to decline in vitality, so does <em>Phaeodactylum tricornutum</em> (Kräbs &amp; Büchel, 2011). Although not an immediate concern, spikes in temperatures from events like the heatwave could harm the population of Vancouver-specific strain of <em>Phaeodactylum tricornutum</em>.</p>
 <p>One of particular concern could be of the <em>Calliarthron tuberculosum</em> species, where Guenther &amp; Martone found that aerial exposure and warm submersion stressed it out. With as extreme heatwave of the one like during 2021 summer on the west coast, it could dry out low tide tide pools and warm them up during high tide, which could lead to the decline of <em>Calliarthron tuberculosum</em>.</p>
 </div>
 </div>
@@ -342,6 +337,13 @@
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Algae Temperature Tolerance</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="Works_Referenced.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
