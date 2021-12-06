@@ -111,6 +111,11 @@
    Discussion on Ocean Temperatures &amp; Algae
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Works_Referenced.html">
+   Works Referenced
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -196,18 +201,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setup">
-   Setup
+  <a class="reference internal nav-link" href="#install-and-environment-setup">
+   Install and Environment Setup
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#recommended-anaconda">
      Recommended: Anaconda
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#docker-container">
-     Docker container
     </a>
    </li>
   </ul>
@@ -220,11 +220,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#following-this-tutorial">
      Following this tutorial:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#alternative-way">
-     Alternative way:
     </a>
    </li>
   </ul>
@@ -243,8 +238,8 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="project-info-setup">
 <h1>Project Info &amp; Setup<a class="headerlink" href="#project-info-setup" title="Permalink to this headline">¶</a></h1>
 <p>See the notebook online <a class="reference external" href="https://mapleia.github.io/EIYL_Notebook/README.html">here</a>!</p>
-<div class="section" id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-and-environment-setup">
+<h2>Install and Environment Setup<a class="headerlink" href="#install-and-environment-setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="recommended-anaconda">
 <h3>Recommended: Anaconda<a class="headerlink" href="#recommended-anaconda" title="Permalink to this headline">¶</a></h3>
 <ol>
@@ -270,34 +265,30 @@
 </pre></div>
 </div>
 </li>
-<li><p>Install GitHub Pages importer to build from code to HTML.</p>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">-c</span> <span class="n">conda-forge</span> <span class="n">ghp-import</span>
-</pre></div>
-</div>
-</li>
 <li><p>Edit the notebook in the browser (or your jupyter supported editor/IDE) as you please!</p></li>
 </ol>
-</div>
-<div class="section" id="docker-container">
-<h3>Docker container<a class="headerlink" href="#docker-container" title="Permalink to this headline">¶</a></h3>
-<p>Coming soon!</p>
-<p><a class="reference external" href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html">https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html</a></p>
+<!-- #region -->
 </div>
 </div>
 <div class="section" id="importing-to-github-pages">
 <h2>Importing to Github Pages<a class="headerlink" href="#importing-to-github-pages" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="following-this-tutorial">
 <h3>Following <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html">this tutorial</a>:<a class="headerlink" href="#following-this-tutorial" title="Permalink to this headline">¶</a></h3>
-<p>Run <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code></p>
-<p>after every major update in the notebook to publish the new version.</p>
-</div>
-<div class="section" id="alternative-way">
-<h3>Alternative way:<a class="headerlink" href="#alternative-way" title="Permalink to this headline">¶</a></h3>
-<p>With the right conda env activated, make sure that you have an installation of <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>.</p>
+<p>Run these steps after every major update to publish the changes.</p>
+<p>With the right conda env activated, make sure that you have an installation of <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>.</p>
 <blockquote>
-<div><p><strong>Conda</strong>: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">jupyter-book</span></code></p>
+<div><p><strong>Conda</strong>: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">jupyter-book</span></code>.</p>
 </div></blockquote>
-<p>Then, run <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span> <span class="pre">build</span> <span class="pre">C:/ABSOLUTE/PATH/TO/PROJECT/FOLDER</span></code></p>
+<ol>
+<li><p>In a terminal (with the conda environment activated), move to the notebook directory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">ABSOLUTE</span><span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">PROJECT</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">FOLDER</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code>.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code> .</p></li>
+</ol>
+<!-- #endregion -->
 </div>
 </div>
 <div class="toctree-wrapper compound">

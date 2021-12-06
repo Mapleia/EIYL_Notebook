@@ -112,6 +112,11 @@
    Discussion on Ocean Temperatures &amp; Algae
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Works_Referenced.html">
+   Works Referenced
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -285,7 +290,7 @@
 <h3>Ocean Temperatures<a class="headerlink" href="#ocean-temperatures" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="national-centers-for-environmental-information">
 <h4>National Centers for Environmental Information<a class="headerlink" href="#national-centers-for-environmental-information" title="Permalink to this headline">¶</a></h4>
-<p>For point 1, this dataset (<a class="reference external" href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.nodc:0240415">Underway meteorological, navigational, optical, physical, and time series data collected aboard NOAA Ship Ronald H. Brown in the Coastal Waters of Southeast Alaska and British Columbia, Columbia River estuary - Washington/Oregon and others from 2021-06-13 to 2021-07-26 (NCEI Accession 0240415)</a>) was found to be suitable for the project.</p>
+<p>For point 1, this dataset <span id="id1">[<a class="reference internal" href="Works_Referenced.html#id7">Dewees and NOAA Office of Marine and Aviation Operations, 2021</a>]</span> was found to be suitable for the project.</p>
 <p>All information about ocean temperatures was collected from this dataset. The information needed for this analysis was identified through combing through the <a class="reference external" href="https://www.nodc.noaa.gov/archive/arc0185/0240415/1.1/data/0-data/RB-0_2021-07-27-133235/DeviceConfiguration_20210613-154208.xml">metadata</a> which can be inspected in the browser.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">SBE45-TSG-MSG_20210XXX-XXXXXX.Raw</span></code> and <code class="docutils literal notranslate"><span class="pre">SST-TSG-Temp-Diff-MSG_20210XXX-XXXXXX.Raw</span></code> were identified as having external (not inside the ship) temperatures measured at different times, so both file types were parsed for more information. Since those files don’t measure the GPS location, another file <code class="docutils literal notranslate"><span class="pre">Primary-GPS-GGA_XXX-XXXXXX.Raw</span></code> were matched using timestamps.</p>
 <p>To match the timestamps even if the second values are different and to reduce the amount of information shown on the plots, the temperature values and the GPS values were averaged over a minute, then matched using the minute value.</p>
@@ -294,8 +299,8 @@
 <div class="section" id="temperature-tolerance-of-algae">
 <h3>Temperature Tolerance of Algae<a class="headerlink" href="#temperature-tolerance-of-algae" title="Permalink to this headline">¶</a></h3>
 <p>For point 2, a variety of sources were used.</p>
-<p>As a starting point, <span id="id1">[<a class="reference internal" href="Works_Referenced.html#id5">Bennett <em>et al.</em>, 2018</a>]</span> was analyzed to see if there were any immediate conclusions that could be drawn.</p>
-<p>Since there wasn’t enough evidence, other sources like <span id="id2">[<a class="reference internal" href="Works_Referenced.html#id2">Small and Edwards, 2021</a>]</span> (Study about <em>Sargassum horneri</em>, an organism found in the Bennett et al. 2018 study), <span id="id3">[<a class="reference internal" href="Works_Referenced.html#id3">Bill <em>et al.</em>, 2016</a>]</span>, <span id="id4">[<a class="reference internal" href="Works_Referenced.html#id4">Guenther and Martone, 2014</a>]</span> and <span id="id5">[<a class="reference internal" href="Works_Referenced.html#id6">Kräbs and Büchel, 2011</a>]</span> was also used.</p>
+<p>As a starting point, <span id="id2">Bennett <em>et al.</em> [<a class="reference internal" href="Works_Referenced.html#id5">2018</a>]</span> was analyzed to see if there were any immediate conclusions that could be drawn.</p>
+<p>Since there wasn’t enough evidence, other sources like <span id="id3">[<a class="reference internal" href="Works_Referenced.html#id2">Small and Edwards, 2021</a>]</span> (Study about <em>Sargassum horneri</em>, an organism found in the <span id="id4">Bennett <em>et al.</em> [<a class="reference internal" href="Works_Referenced.html#id5">2018</a>]</span> study), <span id="id5">[<a class="reference internal" href="Works_Referenced.html#id3">Bill <em>et al.</em>, 2016</a>]</span>, <span id="id6">[<a class="reference internal" href="Works_Referenced.html#id4">Guenther and Martone, 2014</a>]</span> and <span id="id7">[<a class="reference internal" href="Works_Referenced.html#id6">Kräbs and Büchel, 2011</a>]</span> was also used.</p>
 </div>
 </div>
 </div>

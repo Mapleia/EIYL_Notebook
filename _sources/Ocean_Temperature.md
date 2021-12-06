@@ -34,12 +34,11 @@ options(repr.plot.width=10, repr.plot.height=6)
 
 +++
 
-Temperature data is found in the `"data"` folder, while coordinates (and the time recorded) are in the `"data/nav"` folder.
+Temperature data {cite}`Dewees2021` are found in the `"data"` folder, while coordinates (and the time recorded) are in the `"data/nav"` folder.
 
-All of the temperature data was cleaned using a `Python` script, located in the `data_cleaning` folder. No packages were used, and can be used as long as a v3.9 Python is installed (anything above or below is untested) and the scripts are pointed to the right data sources. *Unfortunately, the version where Jupyter runs on Windows (v3.7 Python) and the data cleaner (v3.9 Python) is different.*
+All of the temperature data was cleaned using a `Python` script, located in the `data_cleaning` folder. No packages were used, and can be used as long as a v3.9 Python is installed (anything above or below is untested) and the scripts are pointed to the right data sources.
 
 - `data/temp_processed_summarized.csv`: mean temp over min
-- `data/temp_processed.csv`: all temp
 - `data/nav/nav_processed.csv`: mean GPS over min
 - `data/nav_temp_joined_processed.csv`: joined mean temp & GPS over min
 
@@ -179,6 +178,8 @@ clean_nav_data <- function(x) {
 }
 ```
 
+Below is the raw ocean navigation data.
+
 ```{code-cell} r
 all_nav_loaded <- list.files(path = "data/nav/",
                       pattern = "*.Raw",
@@ -191,6 +192,8 @@ all_nav_loaded <- list.files(path = "data/nav/",
 summary(all_nav_loaded)
 ```
 
+Since the latitude and longitude are in the degree minutes format, they must be converted.
+
 ```{code-cell} r
 all_nav <- all_nav_loaded %>%
     group_by(datetime) %>%
@@ -202,7 +205,7 @@ all_nav <- all_nav_loaded %>%
            deg_long_dec = round((mean_long - deg_long_int) * 10000)) %>%
     mutate(mean_deg_lat = deg_lat_int + deg_lat_dec/(60 * 100),
           mean_deg_long = deg_long_int + deg_long_dec / (60 * 100)) %>%
-    select(-deg_lat_int, -deg_long_int, -deg_lat_dec, -deg_long_dec)
+    select(-deg_lat_int, -deg_long_int, -deg_lat_dec, -deg_long_dec, -mean_lat, -mean_long)
 
 
 write_csv(all_nav, "data/nav/nav_processed.csv")
@@ -213,7 +216,7 @@ head(all_nav)
 summary(all_nav)
 ```
 
-Since we have the date and time (by the minute) of both the temperature and it's coordinates, we can match the two variables together.
+Since we have the date and time (by the minute) of both the temperature and it's coordinates, we can match the two columns.
 
 ```{code-cell} r
 joined_temp_nav <- inner_join(all_temperature, 
@@ -228,7 +231,7 @@ head(joined_temp_nav)
 summary(joined_temp_nav)
 ```
 
-## Visualize the Data
+## Visualizing the Data
 
 +++
 
