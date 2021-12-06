@@ -28,17 +28,16 @@ See the notebook online [here](https://mapleia.github.io/EIYL_Notebook/README.ht
     ```
 4. Edit the notebook in the browser (or your jupyter supported editor/IDE) as you please!
 
-
+<!-- #region -->
 ## Importing to Github Pages
 ### Following [this tutorial](https://jupyterbook.org/publish/gh-pages.html):
 
 Run these steps after every major update to publish the changes.
 
-```
-{attention}
+
 With the right conda env activated, make sure that you have an installation of `jupyter-book`.
 > **Conda**: `conda install -c conda-forge jupyter-book`.
-```
+
 1. In a terminal (with the conda environment activated), move to the notebook directory.
     ```
     cd C:/ABSOLUTE/PATH/TO/PROJECT/ROOT/FOLDER
@@ -47,3 +46,4 @@ With the right conda env activated, make sure that you have an installation of `
 3. Run `ghp-import -n -p -f _build/html` .
 
 
+<!-- #endregion -->
