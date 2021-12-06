@@ -75,7 +75,16 @@ clean_SBE45_data <- function(x) {
                                     "conductivity",
                                     "salinity",
                                     "sound_vel",
-                                    "ext_temp")) %>%
+                                    "ext_temp"),
+                    col_types = cols(
+                      date = col_character(),
+                      time = col_time(format = ""),
+                      int_temp = col_double(),
+                      conductivity = col_double(),
+                      salinity = col_double(),
+                      sound_vel = col_double(),
+                      ext_temp = col_double()
+                    )) %>%
     select(date, time, ext_temp)
   return(read)
 }
@@ -89,8 +98,10 @@ clean_STT_TSG_data <- function(x) {
                                    "type",
                                    "diff",
                                    "ext_temp",
-                                   "int_temp")) %>%
-    select(date, time, ext_temp)    
+                                   "int_temp",
+                                  "extra")
+                    ) %>%
+    select(date, time)    
   return(read)
 }
 ```
@@ -127,8 +138,6 @@ all_temperature_cleaned <- all_temperature_loaded %>%
   filter(ext_temp > 2) %>%
   format_datetime()
 
-write_csv(all_temperature_cleaned, "data/temp_processed.csv")
-
 all_temperature <- group_by(all_temperature_cleaned, datetime) %>%
     summarize(mean_ext = mean(ext_temp, na.rm = TRUE))
 
@@ -162,9 +171,9 @@ clean_nav_data <- function(x) {
                      "geoidal",
                      "geoidal_unit",
                      "age_diff",
-                     "diff_station",
-                     "checksum"
-                   )) %>%
+                     "diff_station"
+                   )
+                  ) %>%
     select(date, time, lat, long)
     return(read)
 }
@@ -174,12 +183,16 @@ clean_nav_data <- function(x) {
 all_nav_loaded <- list.files(path = "data/nav/",
                       pattern = "*.Raw",
                       full.names = T) %>%
-  map_df(~clean_nav_data(.)) 
+  map_df(~clean_nav_data(.)) %>%
+  format_datetime()
+```
+
+```{code-cell} r
+summary(all_nav_loaded)
 ```
 
 ```{code-cell} r
 all_nav <- all_nav_loaded %>%
-    format_datetime() %>%
     group_by(datetime) %>%
     summarize(mean_lat = mean(lat), mean_long = mean(long)) %>%
     mutate(mean_lat = mean_lat/100, mean_long = mean_long/100) %>%
@@ -228,18 +241,27 @@ time_plot <- ggplot(all_temperature, aes(x = datetime,
   geom_point() +
   scale_colour_gradient(low = "blue", high = "red") +
   labs(x = "Date and Time PST", 
-       y = "Mean (by the min) Ocean Temperature (celcius)",
-       colour = "Mean External Temperature")
+       y = "Mean (min) Ocean Temperature (°C)",
+       colour = "Mean Ocean Temperature (°C)")
 time_plot
 ```
 
 ```{code-cell} r
 p<- plot_ly(joined_temp_nav, 
-        x = ~mean_lat, 
-        y = ~mean_long,
-        z = ~mean_ext,
-        color = ~mean_ext) %>%
-  add_markers(size = 0.7)
+        x = ~mean_deg_lat, 
+        y = ~mean_deg_long,
+        z = ~mean_ext,  
+        color = ~mean_ext
+        ) %>%
+    add_markers(size = 0.7) %>% 
+    colorbar(title = "Mean Ocean Temp (°C)")%>%
+    layout(title = "Mean Ocean Temperature and Coordinates",
+           scene = list(
+               xaxis = list(title = "Mean Latitude (°)"),
+               yaxis = list(title = "Mean Longitude (°)"),
+               zaxis = list(title = "Mean Ocean Temp (°C)")
+               )
+           )
 ```
 
 ```{code-cell} r
