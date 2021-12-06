@@ -1,3 +1,5 @@
 .ipynb_checkpoints
 data_cleaning/.idea
-_build
+_build/
+build
+data/temp_processed.csv
