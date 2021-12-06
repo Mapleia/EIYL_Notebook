@@ -24,3 +24,6 @@ html:
 repository:
   url: https://github.com/Mapleia/EIYL_Notebook
   branch: master
+sphinx:
+  config:
+    bibtex_reference_style: author_year

@@ -70,14 +70,13 @@
   publisher = {Walter de Gruyter {GmbH}},
 }
 
-@TechReport{Dewees2021,
-  author      = {Bryce Dewees and {NOAA Office of Marine and Aviation Operations}},
-  institution = {NOAA National Centers for Environmental Information},
-  title       = {Underway meteorological, navigational, optical, physical, and time series data collected aboard NOAA Ship Ronald H. Brown in the Coastal Waters of Southeast Alaska and British Columbia, Columbia River estuary - Washington/Oregon and others from 2021-06-13 to 2021-07-26 (NCEI Accession 0240415)},
-  year        = {2021},
-  groups      = {Used},
-  journal     = {{NOAA National Centers for Environmental Information} Dataset},
-  url         = {https://www.ncei.noaa.gov/archive/accession/0240415},
+@Article{Dewees2021,
+  author  = {Bryce Dewees and {NOAA Office of Marine and Aviation Operations}},
+  journal = {{NOAA National Centers for Environmental Information} Dataset},
+  title   = {Underway meteorological, navigational, optical, physical, and time series data collected aboard NOAA Ship Ronald H. Brown in the Coastal Waters of Southeast Alaska and British Columbia, Columbia River estuary - Washington/Oregon and others from 2021-06-13 to 2021-07-26 (NCEI Accession 0240415)},
+  year    = {2021},
+  groups  = {Used},
+  url     = {https://www.ncei.noaa.gov/archive/accession/0240415},
 }
 
 @Article{Harley2012,
